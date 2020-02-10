@@ -19,15 +19,13 @@
 
 
 ### Installation manually copied:
-* Download FreeCAD macro file "start_bolts.FCMacro" and the BOLTS directory .
-* Place both in your FreeCAD Macro directory.
-* For more information refere to (offline ATM :-():
-** http://www.bolts-library.org/en/docs/0.3/freecad/installation.html
+* Download the BOLTS directory.
+* Place in your FreeCAD Mod directory.
 
 
 ### Start BOLTS
-* Run the Macro "start_bolts.FCMacro".
-* To be sure BOLTS was succressfully installed try to "import BOLTS" in the Python console.
+* In FreeCAD change to workbench BOLTSFC.
+* Use menue or toolbar icon to start BOLTS gui.
 
 
 bernd@bimstatik.org
