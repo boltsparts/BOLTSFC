@@ -17,7 +17,7 @@
 
 from os.path import dirname, join
 bolts_path = dirname(__file__)
-from BOLTS import USE_PYSIDE
+from .. import USE_PYSIDE
 
 import FreeCAD
 import FreeCADGui
@@ -58,14 +58,15 @@ import Part
 import Sketcher
 import sys
 from os import listdir
-from BOLTS.bolttools import blt
-from BOLTS.bolttools import freecad
-from BOLTS.bolttools.blt import Collection, Repository, ClassName, ClassStandard
+from ..bolttools import blt
+from ..bolttools import freecad
+from ..bolttools.blt import Collection, Repository, ClassName, ClassStandard
 import importlib
 
 def add_part(collection, base,params,doc):
 	if isinstance(base,freecad.BaseFunction):
-		module = importlib.import_module("BOLTS.freecad.%s.%s" %
+		# TODO use a relative import
+		module = importlib.import_module("freecad.bolts.BOLTS.freecad.%s.%s" %
 			(collection.id,base.module_name))
 		module.__dict__[base.name](params,doc)
 	else:
